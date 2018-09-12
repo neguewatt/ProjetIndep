@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="col-md-2" *ngFor="let statusCard of statusCards">
+    	<ngx-button-switch [title]="statusCard.title" [type]="statusCard.type">
+      		<i [ngClass]="statusCard.iconClass"></i>
+    	</ngx-button-switch>
+	</div>
+</div>
+
+<div class="row">
+<div class="col-4">
+	<nb-card>
+	  <nb-card-header> CLient :</nb-card-header>
+	  <nb-card-body>
+	    Description : 
+	  </nb-card-body>
+	  <nb-card-footer>Adresse : </nb-card-footer>
+	</nb-card>
+</div>
+</div>
