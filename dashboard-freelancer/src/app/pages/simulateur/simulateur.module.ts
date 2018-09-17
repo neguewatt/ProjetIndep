@@ -9,6 +9,7 @@ import { SimulateurComponent } from './simulateur.component';
     ThemeModule,
     NgxEchartsModule,
   ],
-  declarations: [SimulateurComponent,]
+  declarations: [SimulateurComponent,
+  ],
 })
 export class SimulateurModule { }
