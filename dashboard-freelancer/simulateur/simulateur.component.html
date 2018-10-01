@@ -1,0 +1,40 @@
+
+<div class="ui grid">
+    <div class="ui form">
+      <div class="inline fields">
+        <label>Veuillez choisir le status de votre société.</label>
+        
+
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="frequency" value='sasu' [(ngModel)]="radioSimu" (ngModelChange)="onChange($event)">
+            <label>SASU</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="frequency" value='eurl' [(ngModel)]="radioSimu" (ngModelChange)="onChange($event)">
+            <label>EURL</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="frequency" value='auto' [(ngModel)]="radioSimu" (ngModelChange)="onChange($event)">
+            <label>Auto-antrepreneur</label>
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui radio checkbox">
+            <input type="radio" name="frequency" value='autre' [(ngModel)]="radioSimu" (ngModelChange)="onChange($event)">
+            <label>autre...</label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div>
+       <ngx-sasu *ngIf="sasu"></ngx-sasu>
+       <ngx-eurl *ngIf="eurl"></ngx-eurl>
+    </div>
+</div>
