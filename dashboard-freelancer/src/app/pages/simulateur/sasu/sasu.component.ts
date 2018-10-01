@@ -40,7 +40,7 @@ constructor(private fb: FormBuilder) {
         this.subscription.unsubscribe();
     }
     ngAfterViewInit(): void {
-        $('.ui.accordion').accordion();
+        //$('.ui.accordion').accordion();
         // $(".tooltip").popup();
     }
 
