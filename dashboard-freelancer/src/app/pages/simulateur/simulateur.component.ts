@@ -12,7 +12,7 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 export class SimulateurComponent  {
     
     registerForm: FormGroup;
-
+    radioSimu: string;
     sasu:boolean;
     eurl:boolean;
     auto:boolean;
@@ -22,8 +22,32 @@ export class SimulateurComponent  {
 
     }
 
-    if (sasu = true){
-       console.log('teste ok1');
+    onChange(event) {
+      if(this.radioSimu == "sasu"){
+        this.sasu = true;
+        this.eurl = false;
+        this.auto = false;
+        this.autre = false;
+      }
+      if(this.radioSimu == "eurl"){
+        this.sasu = false;
+        this.eurl = true;
+        this.auto = false;
+        this.autre = false;
+      }
+      if(this.radioSimu == "auto"){
+        this.sasu = false;
+        this.eurl = false;
+        this.auto = true;
+        this.autre = false;
+      }
+      if(this.radioSimu == "autre"){
+        this.sasu = false;
+        this.eurl = false;
+        this.auto = false;
+        this.autre = true;
+      }
+
     }
 
 

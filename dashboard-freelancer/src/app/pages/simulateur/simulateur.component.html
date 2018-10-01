@@ -7,30 +7,25 @@
 
         <div class="field">
           <div class="ui radio checkbox">
-            <input type="radio" name="frequency" value='sasu' [(ngModel)]=value >
+            <input type="radio" name="frequency" value='sasu' [(ngModel)]="radioSimu" (ngModelChange)="onChange($event)">
             <label>SASU</label>
           </div>
         </div>
-
-
-
-
-
         <div class="field">
           <div class="ui radio checkbox">
-            <input type="radio" name="frequency" value='eurl' [(ngModel)]=value checked="checked">
+            <input type="radio" name="frequency" value='eurl' [(ngModel)]="radioSimu" (ngModelChange)="onChange($event)">
             <label>EURL</label>
           </div>
         </div>
         <div class="field">
           <div class="ui radio checkbox">
-            <input type="radio" name="frequency" value='auto' [(ngModel)]=value>
+            <input type="radio" name="frequency" value='auto' [(ngModel)]="radioSimu" (ngModelChange)="onChange($event)">
             <label>Auto-antrepreneur</label>
           </div>
         </div>
         <div class="field">
           <div class="ui radio checkbox">
-            <input type="radio" name="frequency" value='autre' [(ngModel)]=value>
+            <input type="radio" name="frequency" value='autre' [(ngModel)]="radioSimu" (ngModelChange)="onChange($event)">
             <label>autre...</label>
           </div>
         </div>
@@ -39,6 +34,7 @@
     <br>
     <br>
     <div>
-       <!-- <ngx-sasu></ngx-sasu> -->
+       <ngx-sasu ngIf="sasu"></ngx-sasu>
+       <ngx-eurl ngIf="sasu"></ngx-eurl>
     </div>
 </div>

@@ -88,7 +88,7 @@ constructor(private fb: FormBuilder) {
         newModel.grossDividends = Math.max(0, Math.round(newModel.netProfit * newModel.dividendsPercentage / 100));
         newModel.dividendsTax = Math.round(newModel.grossDividends * 0.172);
         newModel.netDividends = newModel.grossDividends - newModel.dividendsTax;
-        newModel.investment = newModel.netProfit - newModel.grossDividends - newModel.dividendsTax;
+        newModel.investment = newModel.netProfit - newModel.grossDividends;
 
         // Shares
         newModel.totalFreelanceShare = newModel.annualNetSalary + newModel.netDividends;
