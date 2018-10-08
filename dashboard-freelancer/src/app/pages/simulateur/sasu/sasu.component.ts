@@ -20,17 +20,17 @@ export class SasuComponent implements OnInit, OnDestroy, AfterViewInit {
 
 constructor(private fb: FormBuilder) {
     this.simulatorForm = fb.group({
-            dailyRevenue: 500,
-            daysPerMonth: 18,
-            otherMonthlyRevenue: 0,
-            otherAnnualRevenue: 0,
-            monthlyFees: 500,
-            annualFees: 2000,
-            monthlyGrossSalary: 3000,
-            annualBonus: 0,
-            dividendsPercentage: 0
+        dailyRevenue: 500,
+        daysPerMonth: 18,
+        otherMonthlyRevenue: 0,
+        otherAnnualRevenue: 0,
+        monthlyFees: 500,
+        annualFees: 2000,
+        monthlyGrossSalary: 3000,
+        annualBonus: 0,
+        dividendsPercentage: 0
     });
-   }
+}
 
     ngOnInit() {
         this.subscription = this.simulatorForm.valueChanges.debounceTime(50).subscribe(() => this.simulate());

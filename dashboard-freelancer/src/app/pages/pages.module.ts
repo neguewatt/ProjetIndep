@@ -9,6 +9,7 @@ import { ParametragesModule } from './parametrages/parametrages.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
+import { ManagoftimeComponent } from './managoftime/managoftime.component';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -27,6 +28,7 @@ const PAGES_COMPONENTS = [
   ],
   declarations: [
     ...PAGES_COMPONENTS,
+    ManagoftimeComponent,
   ],
 })
 export class PagesModule {
