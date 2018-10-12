@@ -15,41 +15,47 @@
 	            	<div class="">
 		            	<div class="ui top attached segment">
 		            		<div class="ui stackable four column grid">
-							  <div class="column"><p>Lundi : </p></div>
-							  <ngb-timepicker [(ngModel)]="startTime"></ngb-timepicker>
-							  <!-- <div class="column"><input  type="number" min="0" step="1" max="23" formControlName="startTime"/> </div> -->
-							  <div class="column"><p>à</p></div><!-- 
-							  <div class="column"><input type="number" min="0" step="1" max="23" formControlName="endTime"/></div> -->
-							  <ngb-timepicker [(ngModel)]="endTime"></ngb-timepicker>
+							  <div class="column">
+							  	<p>Lundi {{ firstday | date: 'dd' }} : </p>
+							  </div>
+							  <div class="column">
+							  	<input  type="number" min="0" step="1" max="23" formControlName="startTime"/>
+							  </div>
+							  <div class="column">
+							  	<p>à</p>
+							  </div>
+							  <div class="column">
+							  	<input type="number" min="0" step="1" max="23" formControlName="endTime"/>
+							  </div>
 							</div>				 		
 						</div>
 						<div class="ui attached segment">
 		            		<div class="ui stackable four column grid">
-							  <div class="column"><p>Mardi : </p></div>
-							  <div class="column"><input  type="number" min="0" step="1" max="23" formControlName="startTime"/> </div>
+							  <div class="column"><p>Mardi {{ mardi | date: 'dd' }} : </p></div>
+							  <div class="column"><input  type="number" min="0" step="1" max="23" formControlName="startTime"/></div>
 							  <div class="column"><p>à</p></div>
 							  <div class="column"><input type="number" min="0" step="1" max="23" formControlName="endTime"/></div>
 							</div>
 						</div>
 						<div class="ui attached segment">
 		            		<div class="ui stackable four column grid">
-							  <div class="column"><p>Mercredi : </p></div>
-							  <div class="column"><input  type="number" min="0" step="1" max="23" formControlName="startTime"/> </div>
+							  <div class="column"><p>Mercredi {{ mercredi | date: 'dd' }} : </p></div>
+							  <div class="column"><input  type="number" min="0" step="1" max="23" formControlName="startTime"/></div>
 							  <div class="column"><p>à</p></div>
 							  <div class="column"><input type="number" min="0" step="1" max="23" formControlName="endTime"/></div>
 							</div>
 						</div>
 						<div class="ui attached segment">
 		            		<div class="ui stackable four column grid">
-							  <div class="column"><p>Jeudi : </p></div>
-							  <div class="column"><input  type="number" min="0" step="1" max="23" formControlName="startTime"/> </div>
+							  <div class="column"><p>Jeudi {{ jeudi | date: 'dd' }} : </p></div>
+							  <div class="column"><input  type="number" min="0" step="1" max="23" formControlName="startTime"/></div>
 							  <div class="column"><p>à</p></div>
 							  <div class="column"><input type="number" min="0" step="1" max="23" formControlName="endTime"/></div>
 							</div>
 						</div>
 						<div class="ui bottom attached segment">
 		            		<div class="ui stackable four column grid">
-							  <div class="column"><p>Vendredi : </p></div>
+							  <div class="column"><p>Vendredi {{ lastday | date: 'dd' }} : </p></div>
 							  <div class="column"><input  type="number" min="0" step="1" max="23" formControlName="startTime"/> </div>
 							  <div class="column"><p>à</p></div>
 							  <div class="column"><input type="number" min="0" step="1" max="23" formControlName="endTime"/></div>

@@ -23,7 +23,7 @@ export class ManagoftimeComponent implements OnInit {
 	startTime = {hour: 8, minute: 0};
 	endTime = {hour: 17, minute: 0};
 
-
+	time = {hour: 13, minute: 30};    
 
 	constructor(private fb: FormBuilder) {
 		this.simulatorForm = fb.group({
