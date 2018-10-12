@@ -1,0 +1,51 @@
+[
+  {
+    "_id": "5bbca909f2d4b47cc220c532",
+    "company": "ZANYMAX",
+    "email": "erinsweeney@zanymax.com",
+    "phone": "+1 (864) 427-3601",
+    "address": "647 Miller Place, Fivepointville, Kansas, 3342"
+  },
+  {
+    "_id": "5bbca909f05d264b9c931f19",
+    "company": "ZENTURY",
+    "email": "erinsweeney@zentury.com",
+    "phone": "+1 (918) 423-2762",
+    "address": "542 Norwood Avenue, Drummond, Mississippi, 5396"
+  },
+  {
+    "_id": "5bbca9099a334d41633130e2",
+    "company": "GAZAK",
+    "email": "erinsweeney@gazak.com",
+    "phone": "+1 (905) 400-3094",
+    "address": "161 Independence Avenue, Rushford, Colorado, 4618"
+  },
+  {
+    "_id": "5bbca909351210384d4d74e2",
+    "company": "HOUSEDOWN",
+    "email": "erinsweeney@housedown.com",
+    "phone": "+1 (938) 544-2125",
+    "address": "905 Woodside Avenue, Avalon, Northern Mariana Islands, 3731"
+  },
+  {
+    "_id": "5bbca909232e543408003301",
+    "company": "NEUROCELL",
+    "email": "erinsweeney@neurocell.com",
+    "phone": "+1 (943) 586-2665",
+    "address": "701 Harden Street, Elfrida, Rhode Island, 3383"
+  },
+  {
+    "_id": "5bbca90930d7e15c7f7b31da",
+    "company": "STRALOY",
+    "email": "erinsweeney@straloy.com",
+    "phone": "+1 (850) 416-2061",
+    "address": "777 Crescent Street, Grenelefe, New Jersey, 4004"
+  },
+  {
+    "_id": "5bbca9094e9fd31a2ae965a9",
+    "company": "ENQUILITY",
+    "email": "erinsweeney@enquility.com",
+    "phone": "+1 (962) 475-3818",
+    "address": "500 Colby Court, Chase, Georgia, 3835"
+  }
+]

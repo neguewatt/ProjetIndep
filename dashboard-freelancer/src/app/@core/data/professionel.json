@@ -1,0 +1,53 @@
+{
+  "particulier": [
+	  {
+		"_id": "5bbcaa25e9b3b74106358873",
+		"name": "Battle Castillo",
+		"email": "battlecastillo@corporana.com",
+		"phone": "+1 (989) 406-3586",
+		"address": "856 Johnson Street, Norris, Massachusetts, 3848"
+	  },
+	  {
+		"_id": "5bbcaa2507b12b4c41cf7461",
+		"name": "Donaldson Colon",
+		"email": "donaldsoncolon@corporana.com",
+		"phone": "+1 (831) 445-3082",
+		"address": "606 Union Street, Stollings, District Of Columbia, 1161"
+	  },
+	  {
+		"_id": "5bbcaa255718a75d9a4df8b5",
+		"name": "Casey Bird",
+		"email": "caseybird@corporana.com",
+		"phone": "+1 (872) 558-2045",
+		"address": "833 Adelphi Street, Dorneyville, Maine, 414"
+	  },
+	  {
+		"_id": "5bbcaa25f5ca8d7a89090adf",
+		"name": "Irwin Grant",
+		"email": "irwingrant@corporana.com",
+		"phone": "+1 (855) 541-2838",
+		"address": "991 Battery Avenue, Worton, Maryland, 4546"
+	  },
+	  {
+		"_id": "5bbcaa2517824dd31264f707",
+		"name": "Dora Frost",
+		"email": "dorafrost@corporana.com",
+		"phone": "+1 (930) 419-2491",
+		"address": "776 Kane Place, Hollymead, New York, 4932"
+	  },
+	  {
+		"_id": "5bbcaa25f5ae2ce411f4c0c1",
+		"name": "Wooten Chaney",
+		"email": "wootenchaney@corporana.com",
+		"phone": "+1 (930) 401-2502",
+		"address": "200 Micieli Place, Gulf, Kansas, 8413"
+	  },
+	  {
+		"_id": "5bbcaa25e01e446ede5a1eed",
+		"name": "Jayne Dodson",
+		"email": "jaynedodson@corporana.com",
+		"phone": "+1 (985) 513-2747",
+		"address": "559 Portal Street, Grandview, Guam, 6026"
+	  }
+	]
+}
