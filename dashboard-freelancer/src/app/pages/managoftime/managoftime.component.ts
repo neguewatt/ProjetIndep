@@ -15,9 +15,9 @@ export class ManagoftimeComponent implements OnInit {
 
 	dateNow: number = Date.now();
 	firstday:number = Date.now();
-	mardi: number = Date.now();
-	mercredi:number = Date.now();
-	jeudi:number = Date.now();
+	Tuesday : number = Date.now();
+	Wednesday :number = Date.now();
+	Thursday :number = Date.now();
 	lastday:number = Date.now();
 
 	startTime = {hour: 8, minute: 0};
@@ -33,9 +33,9 @@ export class ManagoftimeComponent implements OnInit {
 
   		var d = new Date();
 		this.firstday = d.setUTCDate(d.getUTCDate()-d.getUTCDay()+1);
-		this.mardi = d.setUTCDate(d.getUTCDate()-d.getUTCDay()+2);
-		this.mercredi = d.setUTCDate(d.getUTCDate()-d.getUTCDay()+3);
-		this.jeudi = d.setUTCDate(d.getUTCDate()-d.getUTCDay()+4);
+		this.Tuesday  = d.setUTCDate(d.getUTCDate()-d.getUTCDay()+2);
+		this.Wednesday  = d.setUTCDate(d.getUTCDate()-d.getUTCDay()+3);
+		this.Thursday  = d.setUTCDate(d.getUTCDate()-d.getUTCDay()+4);
 		this.lastday = d.setUTCDate(d.getUTCDate()-d.getUTCDay()+5);
 
 

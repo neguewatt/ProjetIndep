@@ -31,7 +31,7 @@
 						</div>
 						<div class="ui attached segment">
 		            		<div class="ui stackable four column grid">
-							  <div class="column"><p>Mardi {{ mardi | date: 'dd' }} : </p></div>
+							  <div class="column"><p>Mardi {{ Tuesday | date: 'dd' }} : </p></div>
 							  <div class="column"><input  type="number" min="0" step="1" max="23" formControlName="startTime"/></div>
 							  <div class="column"><p>à</p></div>
 							  <div class="column"><input type="number" min="0" step="1" max="23" formControlName="endTime"/></div>
@@ -39,7 +39,7 @@
 						</div>
 						<div class="ui attached segment">
 		            		<div class="ui stackable four column grid">
-							  <div class="column"><p>Mercredi {{ mercredi | date: 'dd' }} : </p></div>
+							  <div class="column"><p>Mercredi {{ Wednesday | date: 'dd' }} : </p></div>
 							  <div class="column"><input  type="number" min="0" step="1" max="23" formControlName="startTime"/></div>
 							  <div class="column"><p>à</p></div>
 							  <div class="column"><input type="number" min="0" step="1" max="23" formControlName="endTime"/></div>
@@ -47,7 +47,7 @@
 						</div>
 						<div class="ui attached segment">
 		            		<div class="ui stackable four column grid">
-							  <div class="column"><p>Jeudi {{ jeudi | date: 'dd' }} : </p></div>
+							  <div class="column"><p>Jeudi {{ Thursday | date: 'dd' }} : </p></div>
 							  <div class="column"><input  type="number" min="0" step="1" max="23" formControlName="startTime"/></div>
 							  <div class="column"><p>à</p></div>
 							  <div class="column"><input type="number" min="0" step="1" max="23" formControlName="endTime"/></div>
@@ -62,7 +62,7 @@
 							</div>
 						</div>
 					</div>
-					<button>Valider</button>
+					<button class="btn btn-primary">Valider</button>
                 </form>
             </div>
     </div>
