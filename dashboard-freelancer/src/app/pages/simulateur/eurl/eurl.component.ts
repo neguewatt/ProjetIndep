@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
-import {Model} from "../Model";
+import {ModelEurl} from "../Model.eurl";
 import "rxjs/add/operator/debounceTime";
 import {Subscription} from "rxjs/Subscription";
 
@@ -12,13 +12,13 @@ import {Subscription} from "rxjs/Subscription";
 export class EurlComponent implements OnInit {
 
   simulatorForm: FormGroup;
-  model: Model;
+  model: ModelEurl;
   subscription: Subscription;
 
 
   constructor(private fb: FormBuilder) {
 	    this.simulatorForm = fb.group({
-	            dailyRevenue: 500,
+	            dailyRevenue: 400,
 	            daysPerMonth: 18,
 	            otherMonthlyRevenue: 0,
 	            otherAnnualRevenue: 0,
@@ -34,66 +34,60 @@ export class EurlComponent implements OnInit {
         this.subscription = this.simulatorForm.valueChanges.debounceTime(50).subscribe(() => this.simulate());
         this.simulate();
     }
-    ngOnDestroy() {
-        this.subscription.unsubscribe();
-    }
-    ngAfterViewInit(): void {
-        //$('.ui.accordion').accordion();
-        // $(".tooltip").popup();
-    }
 
     simulate(): void {
 
-        let newModel: Model = new Model();
+        let newModelEurl: ModelEurl = new ModelEurl();
 
         let params = this.simulatorForm.value;
 
         // Revenues
-        newModel.dailyRevenue = params.dailyRevenue;
-        newModel.daysPerMonth = params.daysPerMonth;
-        newModel.annualRevenueFromRegularMonthlyRevenue = params.dailyRevenue * params.daysPerMonth * 12;
-        newModel.otherMonthlyRevenue = params.otherMonthlyRevenue;
-        newModel.annualRevenueFromOtherMonthlyRevenue = params.otherMonthlyRevenue * 12;
-        newModel.otherAnnualRevenue = params.otherAnnualRevenue;
-        newModel.totalAnnualRevenue = newModel.annualRevenueFromRegularMonthlyRevenue + newModel.annualRevenueFromOtherMonthlyRevenue + params.otherAnnualRevenue;
+        newModelEurl.dailyRevenue = params.dailyRevenue;
+        newModelEurl.daysPerMonth = params.daysPerMonth;
+        newModelEurl.annualRevenueFromRegularMonthlyRevenue = params.dailyRevenue * params.daysPerMonth * 12;
+        newModelEurl.otherMonthlyRevenue = params.otherMonthlyRevenue;
+        newModelEurl.annualRevenueFromOtherMonthlyRevenue = params.otherMonthlyRevenue * 12;
+        newModelEurl.otherAnnualRevenue = params.otherAnnualRevenue;
+        newModelEurl.totalAnnualRevenue = newModelEurl.annualRevenueFromRegularMonthlyRevenue + newModelEurl.annualRevenueFromOtherMonthlyRevenue + params.otherAnnualRevenue;
 
         // Fees
-        newModel.monthlyFees = params.monthlyFees;
-        newModel.annualFeesFromMonthlyFees = params.monthlyFees * 12;
-        newModel.annualFees = params.annualFees;
-        newModel.totalAnnualFees = (params.monthlyFees * 12) + params.annualFees;
+        newModelEurl.monthlyFees = params.monthlyFees;
+        newModelEurl.annualFeesFromMonthlyFees = params.monthlyFees * 12;
+        newModelEurl.annualFees = params.annualFees;
+        newModelEurl.totalAnnualFees = (params.monthlyFees * 12) + params.annualFees;
 
         // Salary
-        newModel.monthlyGrossSalary = params.monthlyGrossSalary;
-        newModel.annualGrossSalary = (params.monthlyGrossSalary * 12);
-        newModel.annualGrossBonus = params.annualBonus;
-        newModel.totalAnnualGrossSalary = newModel.annualGrossSalary + newModel.annualGrossBonus;
-        newModel.employerSalaryTax = Math.round(newModel.totalAnnualGrossSalary * 0.42);
-        newModel.employeeSalaryTax = Math.round(newModel.totalAnnualGrossSalary * 0.22);
-        newModel.annualSuperGrossSalary = newModel.totalAnnualGrossSalary + newModel.employerSalaryTax;
-        newModel.annualNetSalary = newModel.totalAnnualGrossSalary - newModel.employeeSalaryTax;
+        newModelEurl.monthlyGrossSalary = params.monthlyGrossSalary;
+        newModelEurl.annualGrossSalary = (params.monthlyGrossSalary * 12);
+        newModelEurl.annualGrossBonus = params.annualBonus;
+        newModelEurl.totalAnnualGrossSalary = newModelEurl.annualGrossSalary + newModelEurl.annualGrossBonus;
+/*        newModelEurl.annualSuperGrossSalary = newModelEurl.totalAnnualGrossSalary + newModelEurl.employerSalaryTax;
+        newModelEurl.annualNetSalary = newModelEurl.totalAnnualGrossSalary - newModelEurl.employeeSalaryTax;*/
+        newModelEurl.employerSalaryTax = Math.round(newModelEurl.totalAnnualGrossSalary / 1.47);
+        newModelEurl.employeeSalaryTax = Math.round(newModelEurl.annualNetSalary * 0.47);
+        newModelEurl.annualNetSalary = newModelEurl.employerSalaryTax - newModelEurl.employeeSalaryTax;
 
         // Spendings
-        newModel.totalAnnualSpendings = newModel.totalAnnualFees + newModel.annualSuperGrossSalary;
+        newModelEurl.totalAnnualSpendings = newModelEurl.totalAnnualFees + newModelEurl.annualSuperGrossSalary;
 
         // Profit
-        newModel.grossProfit = newModel.totalAnnualRevenue - newModel.totalAnnualSpendings;
-        newModel.profitTax = Math.max(0, Math.round(Math.min(newModel.grossProfit, 38000) * 0.15) + Math.round(Math.max(newModel.grossProfit - 38000, 0) * 0.28));
-        newModel.netProfit = newModel.grossProfit - newModel.profitTax;
+        newModelEurl.grossProfit = newModelEurl.totalAnnualRevenue - newModelEurl.totalAnnualSpendings;
+        newModelEurl.profitTax = Math.max(0, Math.round(Math.min(newModelEurl.grossProfit, 38000) * 0.15) + Math.round(Math.max(newModelEurl.grossProfit - 38000, 0) * 0.28));
+        newModelEurl.netProfit = newModelEurl.grossProfit - newModelEurl.profitTax;
 
         // Dividends
-        newModel.dividendsPercentage = params.dividendsPercentage;
-        newModel.grossDividends = Math.max(0, Math.round(newModel.netProfit * newModel.dividendsPercentage / 100));
-        newModel.dividendsTax = Math.round(newModel.grossDividends * 0.172);
-        newModel.netDividends = newModel.grossDividends - newModel.dividendsTax;
-        newModel.investment = newModel.netProfit - newModel.grossDividends;
+        newModelEurl.dividendsPercentage = params.dividendsPercentage;
+        newModelEurl.grossDividends = Math.max(0, Math.round(newModelEurl.netProfit * newModelEurl.dividendsPercentage / 100));
+        newModelEurl.dividendsTax = Math.round(newModelEurl.grossDividends * 0.172);
+        newModelEurl.netDividends = newModelEurl.grossDividends - newModelEurl.dividendsTax;
+        newModelEurl.investment = newModelEurl.netProfit - newModelEurl.grossDividends;
 
         // Shares
-        newModel.totalFreelanceShare = newModel.annualNetSalary + newModel.netDividends;
-        newModel.totalCompanyShare = newModel.investment;
-        newModel.totalStateShare = newModel.employerSalaryTax + newModel.employeeSalaryTax + newModel.profitTax + newModel.dividendsTax;
+        newModelEurl.totalFreelanceShare = newModelEurl.annualNetSalary + newModelEurl.netDividends;
+        newModelEurl.totalCompanyShare = newModelEurl.investment;
+        newModelEurl.totalStateShare = newModelEurl.employerSalaryTax + newModelEurl.employeeSalaryTax + newModelEurl.profitTax + newModelEurl.dividendsTax;
 
-        this.model = newModel;
+        this.model = newModelEurl;
     }
 
 }

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ManagoftimeComponent } from './managoftime/managoftime.component';
 import { ClientsComponent } from './clients/clients.component';
 import { FacturesComponent } from './factures/factures.component';
 import { SimulateurComponent } from './simulateur/simulateur.component';
@@ -16,6 +17,9 @@ const routes: Routes = [{
     path: 'dashboard',
     component: DashboardComponent,
   }, {
+    path: 'managoftime',
+    component: ManagoftimeComponent,
+  },{
     path: 'clients',
     component: ClientsComponent,
   },{

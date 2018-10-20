@@ -7,6 +7,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/dashboard',
     home: true,
   },{
+    title: 'Mana time',
+    icon: 'nb-home',
+    link: '/pages/managoftime',
+    home: true,
+  },{
     title: 'Clients',
     icon: 'nb-home',
     link: '/pages/clients',
