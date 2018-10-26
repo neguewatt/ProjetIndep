@@ -15,6 +15,8 @@ interface CardSettings {
 })
 export class DashboardComponent implements OnDestroy {
 
+  dateNow: number = Date.now();
+
   private alive = true;
 
   lightCard: CardSettings = {

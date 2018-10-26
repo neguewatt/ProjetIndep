@@ -14,6 +14,20 @@
     }
   }
 
+  .location {
+    font-family: nb-theme(font-secondary);
+    font-size: 2.5rem;
+    font-weight: nb-theme(font-weight-normal);
+    color: nb-theme(color-fg-heading);
+  }
+
+  .date {
+    font-family: nb-theme(font-main);
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    font-weight: nb-theme(font-weight-light);
+  }
+
   @include media-breakpoint-down(is) {
     /deep/ nb-card.large-card {
       height: nb-theme(card-height-medium);

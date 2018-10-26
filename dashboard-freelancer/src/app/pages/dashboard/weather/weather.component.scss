@@ -14,19 +14,14 @@
     color: nb-theme(color-fg);
   }
 
-  .location {
-    font-family: nb-theme(font-secondary);
-    font-size: 2.5rem;
-    font-weight: nb-theme(font-weight-normal);
-    color: nb-theme(color-fg-heading);
+  .separator{
+    height: 40px;
+    width: 1px;
+    margin: 0;
+    background: #ddd;
   }
 
-  .date {
-    font-family: nb-theme(font-main);
-    font-size: 1.25rem;
-    line-height: 1.25rem;
-    font-weight: nb-theme(font-weight-light);
-  }
+
 
   .daily-forecast {
     display: flex;
