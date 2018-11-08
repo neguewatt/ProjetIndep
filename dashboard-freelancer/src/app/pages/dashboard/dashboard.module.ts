@@ -5,6 +5,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
 import { ThemeModule } from '../../@theme/theme.module';
 import { DashboardComponent } from './dashboard.component';
 import { WeatherComponent } from './weather/weather.component';
+
 import { WeatherService } from '../../@core/data/weather.service'
 import { HttpModule } from '@angular/http';
 
@@ -16,7 +17,7 @@ import { HttpModule } from '@angular/http';
     HttpModule
   ],
   declarations: [
-    DashboardComponent, WeatherComponent
+    DashboardComponent, WeatherComponent,
   ],
   providers:[
   	WeatherService
